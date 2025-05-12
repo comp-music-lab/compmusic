@@ -108,7 +108,7 @@ p+scale_fill_manual(values=c("indianred2", "white", "lightskyblue"))
 
 
 
-#Ch3 Visualising Ellis's (1885) scale data (Fig. 3.2)
+#Ch3 Visualising Ellis's (1885) scale data (Fig. 3.1)
 
 d<-read_csv(file='https://raw.githubusercontent.com/jomimc/DaMuSc/refs/heads/main/Data/measured_scales.csv') #read raw Musical Scale Database data directly from GitHub
 d<-subset(d,Reference=="A. J. Ellis. On the Musical Scales of Various Nations. Journal of the Society of arts, 1885") #reduce to only Ellis's data
