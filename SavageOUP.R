@@ -27,7 +27,7 @@ x <- fit$points[,1]
 y <- fit$points[,2]
 plot(x, y, xlab="Coordinate 1", ylab="Coordinate 2",
      main="Musical similarities (Savage)", type="n")
-text(x, y, labels = row.names(savage), cex=.7)
+text(x, y, labels = row.names(savage), cex=1.5)
 
 #MDS Ozaki
 fit <- cmdscale(ozaki.dist,eig=TRUE, k=2) # k is the number of dim
@@ -38,10 +38,10 @@ x <- fit$points[,1]
 y <- fit$points[,2]
 plot(x, y, xlab="Coordinate 1", ylab="Coordinate 2",
      main="Musical similarities (Ozaki)", type="n")
-text(x, y, labels = row.names(ozaki), cex=.7)
+text(x, y, labels = row.names(ozaki), cex=1.5)
 
 #Distance matrix correlation
-plot(ozaki.dist,savage.dist,
+plot(ozaki.dist,savage.dist,pch=19,
      xlab="Musical dissimilarity between pairs (Ozaki)", ylab="Musical dissimilarity between pairs (Savage)",
      xlim=c(0, 1), ylim=c(0, 1))
 mantel(ozaki.dist,savage.dist)
